@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <!-- Background: Primary Color Dark Slate (#0f172a), 40x40, Radius 8px -->
+  <rect x="0" y="0" width="40" height="40" rx="8" fill="#0f172a"/>
+  
+  <!-- Icon Shape: White Border Box 
+       CSS: 18x18 outer size, 3px border, 2px radius.
+       SVG Stroke is centered. To get 18px outer:
+       Path Size = 18 - 3 = 15.
+       Position = Centered in 40x40 -> (40-15)/2 = 12.5.
+       Radius: Outer 2px -> Path Radius = 2 - 1.5 = 0.5.
+  -->
+  <rect x="12.5" y="12.5" width="15" height="15" rx="0.5" fill="none" stroke="#ffffff" stroke-width="3"/>
+  
+  <!-- Accent: Blue Diamond (#3b82f6)
+       CSS: 10x10, top -5, right -5.
+       Center of box (40,40 context) = (20,20)? No, logo is 40x40.
+       Icon Shape centered: 11 to 29.
+       Top-Right corner of Icon Shape: (29, 11).
+       Diamond Top-Right relative to that: +5, -5.
+       Diamond Center is at (29, 11).
+       Width 10.
+  -->
+  <rect x="24" y="6" width="10" height="10" fill="#3b82f6" transform="rotate(45 29 11)"/>
+</svg>

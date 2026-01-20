@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>docVerse.tech v2.0 | Simple File Utilities</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="description" content="Professional, simple, and powerful file tools.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <div class="icon-shape"></div>
+                </div>
+                <h1 class="logo-text">doc<span>Verse</span>.tech</h1>
+                <span class="version-badge">v2.0</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="utility-card">
+                <div class="tool-selector-container">
+                    <label for="tool-select">Choose a tool:</label>
+                    <div class="searchable-select">
+                        <input type="text" id="tool-search" placeholder="Search 30+ tools (Merge, Split, JPG to PDF...)"
+                            autocomplete="off">
+                        <div id="tool-dropdown" class="dropdown-content hidden">
+                            <!-- Tools will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="active-tool-banner">
+                    <span id="current-tool-icon">M</span>
+                    <h2 id="current-tool-name">Merge PDF</h2>
+                </div>
+
+                <!-- Tool Options Bar -->
+                <div id="tool-options" class="tool-options">
+                    <div id="compression-container" class="option-group hidden">
+                        <label>Compression Level: <span id="compression-value">Medium</span></label>
+                        <input type="range" id="compression-slider" min="1" max="100" value="70" class="slider">
+                    </div>
+
+                    <div id="range-container" class="option-group hidden">
+                        <label>Page Ranges (e.g. 1-2, 5)</label>
+                        <input type="text" id="range-input" placeholder="Enter pages..." class="text-input-bar">
+                    </div>
+
+                    <div id="password-container" class="option-group hidden">
+                        <label>Set Password</label>
+                        <input type="text" id="password-input" placeholder="Enter secure password"
+                            class="text-input-bar">
+                    </div>
+                </div>
+
+                <div class="upload-zone" id="drop-zone">
+                    <div class="upload-content">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p class="upload-text">Drag and drop files here or <span>browse</span></p>
+                        <p class="upload-hint" id="tool-hint">Combine multiple PDF files into one.</p>
+                    </div>
+                    <input type="file" id="file-input" hidden multiple>
+                </div>
+
+                <div id="file-list" class="file-list hidden">
+                    <!-- File items will be injected here -->
+                </div>
+
+                <div id="file-count" class="file-count hidden">0 files selected</div>
+
+                <div id="file-count" class="file-count hidden">0 files selected</div>
+
+                <button class="action-btn" id="process-btn">Process Now</button>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 docVerse.tech. Secure. Fast. Simple.</p>
+                <div class="footer-links">
+                    <a href="#" id="switch-v1">Switch to v1.0</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
